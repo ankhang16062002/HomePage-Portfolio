@@ -36,10 +36,19 @@ a {
     overflow-x: hidden;
     background-color: white;
 
+    @include mobile() {
+        scroll-behavior: unset;
+        scroll-snap-type: unset; 
+    }
+
     & > * {
         width: 100%;
         height: calc(100vh - 70px);
         scroll-snap-align: start;  // pause in head div
+
+        @include mobile() {
+            scroll-snap-align: unset;
+        }
     }
 }
 
