@@ -1,6 +1,7 @@
 .testimonials {
     @include flex(center, flex-start);
     flex-direction: column;
+    height: auto;
 
     &__title {
         font-size: 5rem;
