@@ -19,13 +19,17 @@ a {
 .home-porfolio {
     height: 100vh;
     overflow-x: hidden;
+
+    @include mobile() {
+        overflow-x: unset;
+    }
 }
 
 .sections {
     width: 100vw;
     height: calc(100vh - 70px);
     position: relative;
-    top: 70px;
+    margin-top: 70px;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory; 
 
@@ -39,6 +43,8 @@ a {
     @include mobile() {
         scroll-behavior: unset;
         scroll-snap-type: unset; 
+        overflow-x: auto;
+        background-color: unset;
     }
 
     & > * {
@@ -48,6 +54,7 @@ a {
 
         @include mobile() {
             scroll-snap-align: unset;
+            margin-top: 15px;
         }
     }
 }

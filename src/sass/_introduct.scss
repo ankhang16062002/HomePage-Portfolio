@@ -111,6 +111,10 @@
             }
 
             animation: arrowBlink 2s linear infinite;
+
+            @include mobile() {
+                display: none;
+            }
         }
     }
 }
