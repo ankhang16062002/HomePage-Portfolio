@@ -1,0 +1,97 @@
+.contact {
+    @include flex(center, center);
+
+    @include mobile() {
+        flex-direction: column;
+    }
+
+    &__left {
+        flex: 1;
+        overflow: hidden;
+
+        @include mobile() {
+            height: 50%;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__right {
+        flex: 1;
+        @include flex(center, center);
+        flex-direction: column;
+
+        @include mobile() {
+            height: 50%;
+            width: 100%;
+            justify-content: flex-start;
+        }
+
+        h2 {
+            margin-bottom: 40px;
+            font-size: 3rem;
+            font-weight: 600;
+
+            @include mobile() {
+                font-size: 2.5rem;
+                margin-bottom: 18px;
+            }
+        }
+
+        form {
+            @include flex(center, space-between);
+            flex-direction: column;
+            width: 310px;
+            height: 400px;
+
+            @include mobile() {
+                width: 250px;
+                height: 260px;
+            }
+
+            input, textarea {
+                width: 100%;
+                font-weight: 400;
+                font-size: 1.4rem;
+
+                @include mobile() {
+                    width: 95%;
+                }
+            }
+
+            input {
+                padding: 10px 5px;
+            }
+
+            textarea {
+                height: 210px;
+                padding: 5px;
+
+                @include mobile() {
+                    height: 120px;
+                }
+            }
+
+            button {
+                background-color: crimson;
+                width: 150px;
+                height: 30px;
+                border-radius: 10px;
+                color: white;
+
+                @include mobile() {
+                    width: 120px;
+                }
+            }
+
+            span {
+                color: green;
+                font-size: 1.6rem;
+                font-weight: 400;
+            }
+        }
+    }
+}

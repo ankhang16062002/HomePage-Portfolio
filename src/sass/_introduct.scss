@@ -1,0 +1,135 @@
+.introduct {
+    @include flex(flex-start, center);
+    overflow: hidden;
+
+    @include tablet() {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__img {
+        flex: 1;
+
+        @include tablet() {
+            height: 50%;
+            overflow: hidden;
+        }
+
+        &__container {
+            width: 700px;
+            height: 700px;
+            background-color: #dc143c;
+            border-radius: 50%;
+            float: right;
+            overflow: hidden;
+            @include flex(flex-end, center);
+
+            @include tablet() {
+                align-items: flex-start;
+            }
+
+            img {
+                width: 90%;
+
+                @include tablet() {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    &__info {
+        flex: 1;
+        height: 100%;
+        padding-left: 50px;
+        position: relative;
+
+        @include flex(flex-start, center);
+        flex-direction: column;
+
+        @include tablet() {
+            padding-left: 0;
+            align-items: center;
+
+            h3:nth-child(3) {
+                font-size: 2.5rem;
+
+                @include mobile() {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        & > * {
+            font-weight: 600;
+            margin-bottom: 35px;
+
+            @include mobile() {
+                margin-bottom: 25px;
+            }
+        }
+
+        h3 {
+            font-size: 3.5rem;
+
+            @include tablet() {
+                font-size: 3rem;
+            }
+
+            @include mobile() {
+                font-size: 2.5rem;
+            }
+
+            span {
+                font-weight: 600;
+                color: crimson;
+            }
+        }
+
+        h1 {
+            font-size: 6rem;
+
+            @include tablet() {
+                font-size: 5rem;
+            }
+
+            @include mobile() {
+                font-size: 4rem;
+            }
+        }
+
+        &__arrow {
+            position: absolute;
+            bottom: 20px;
+            margin-bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+    
+            img {
+                max-width: 100%;
+            }
+
+            animation: arrowBlink 2s linear infinite;
+        }
+    }
+}
+
+@keyframes arrowBlink {
+    100% {
+        opacity: 0;
+    }
+}
+
+.ityped-cursor {
+    animation: blink 1s infinite;
+
+    @keyframes blink {
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }    
+}
