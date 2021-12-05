@@ -21,7 +21,7 @@ a {
     overflow-x: hidden;
 
     @include mobile() {
-        overflow-x: unset;
+        height: auto;
     }
 }
 
@@ -41,10 +41,8 @@ a {
     background-color: white;
 
     @include mobile() {
-        scroll-behavior: unset;
-        scroll-snap-type: unset; 
-        overflow-x: auto;
-        background-color: unset;
+        scroll-snap-type: unset;
+        height: auto; 
     }
 
     & > * {
@@ -54,7 +52,8 @@ a {
 
         @include mobile() {
             scroll-snap-align: unset;
-            margin-top: 15px;
+            margin-top: 30px;
+            min-height: calc(100vh - 70px);
         }
     }
 }
