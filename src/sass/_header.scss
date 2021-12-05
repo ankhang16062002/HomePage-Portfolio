@@ -6,8 +6,13 @@
     width: 100vw;
     padding: 0 30px;
     transition: all 0.4s ease-out;
+    background-color: white;
 
     @include flex(center, space-between);
+
+    @include mobile() {
+        height: calc(#{$header_height} - 20px);
+    }
 
     &__left {
         @include flex(center, center);

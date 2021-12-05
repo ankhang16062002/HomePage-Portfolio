@@ -29,7 +29,7 @@ a {
     width: 100vw;
     height: calc(100vh - 70px);
     position: relative;
-    margin-top: 70px;
+    top: 70px;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory; 
 
@@ -43,6 +43,7 @@ a {
     @include mobile() {
         scroll-snap-type: unset;
         height: auto; 
+        top: 0px;
     }
 
     & > * {
@@ -52,8 +53,8 @@ a {
 
         @include mobile() {
             scroll-snap-align: unset;
-            margin-top: 30px;
-            min-height: calc(100vh - 70px);
+            padding-top: 50px;
+            height: 100vh;
         }
     }
 }
