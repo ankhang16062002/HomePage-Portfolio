@@ -5,7 +5,7 @@ const Header = ({openMenu, setOpenMenu}) => {
     return (
         <div className = {`header ${openMenu ? 'active' : ''}`} >
             <div className="header__left">
-                <div className="header__left__logo"><a href = "#introduct">genius.</a></div>
+                <div className="header__left__logo"><a href = "#introduct">Front-end.</a></div>
                 <div className="header__left__contact">
                     <div className="header__left__contact__phone">
                         <Person className = "icon"/>

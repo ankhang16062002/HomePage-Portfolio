@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react'
-import imgIntroduct from '../../assets/man.png'
+import imgIntroduct from '../../assets/ankhang.png'
 import imgDown from '../../assets/down.png'
 import { init } from 'ityped'
 
@@ -11,7 +11,7 @@ const Introduct = () => {
             showCursor: true,
             backSpeed:  60,
             backDelay:  1500,
-            strings: ['Developer', 'Desinger', 'Content Credictor'] }
+            strings: ['Developer', 'Designer', 'Content Credictor'] }
         )
     }, [])
 
@@ -24,7 +24,7 @@ const Introduct = () => {
             </div>
             <div className="introduct__info">
                 <h3>Hi There, I'm</h3>
-                <h1>Safak Kocaoglu</h1>
+                <h1>Vương An Khang</h1>
                 <h3>Freelance <span ref = {textBlink}></span></h3>
                 <div className="introduct__info__arrow">
                     <a href="#portfolio"><img src= {imgDown} alt="" /></a>
